@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/mainBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackground"
+        android:id="@+id/rel_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_plugg"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_back_"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/robotoregular"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:layout_toEndOf="@+id/img_plugg"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:fontFamily="@font/robotomedium"
+        android:id="@+id/intruderlogs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/intruder_logs"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/robotoregular"
+        android:id="@+id/deleteall"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/delete_all"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_inapp"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:background="#007BFF"
+        android:layout_height="wrap_content"/>
+
+    <ListView
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_above="@+id/rel_live_ad"
+        android:id="@+id/intruder_adapter"
+        android:layout_below="@+id/rel_inapp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rel_live_ad"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

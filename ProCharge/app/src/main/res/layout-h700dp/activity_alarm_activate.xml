@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:keepScreenOn="true"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_above="@+id/rel_live_ad"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/activate_progess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminateOnly="false"
+        android:progress="80"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/current_per"
+       android:layout_centerInParent="true"
+        android:textSize="@dimen/_80sdp"
+        android:text="80%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="@dimen/_25sdp"
+        android:text="@string/charging"
+        android:layout_marginTop="@dimen/_40sdp"
+       android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/current_per"
+        android:textSize="@dimen/_18sdp"
+        android:text="Battery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rel_live_ad"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

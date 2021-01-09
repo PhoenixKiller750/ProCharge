@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/mainBg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp">
+
+    <ImageView
+        android:padding="@dimen/_5sdp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/img_inapp"
+        android:src="@drawable/ic_tips"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:gravity="center_vertical"
+        android:fontFamily="@font/robotomedium"
+        android:textSize="@dimen/_15sdp"
+        android:text="@string/title_dashboard"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:padding="@dimen/_5sdp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/img_settings"
+        android:src="@drawable/ic_settings"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/header"
+        android:id="@+id/battery_view"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progress="80"
+            android:progressDrawable="@drawable/battery_show" />
+
+        <TextView
+            android:fontFamily="@font/robotoregular"
+            android:id="@+id/txt_per"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_30sdp"
+            android:text="@string/_30"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="@font/robotoregular"
+            android:layout_alignBaseline="@+id/txt_per"
+            android:layout_toEndOf="@+id/txt_per"
+            android:id="@+id/txt_per_sh"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_30sdp"
+            android:text="@string/per"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_10sdp"
+            android:text="@string/msg_view"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:fontFamily="@font/robotoregular"
+        android:id="@+id/txt_plugg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/battery_view"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/txt_plugg"
+        android:textSize="@dimen/_12sdp" />
+
+    <RelativeLayout
+        android:layout_above="@+id/txt_message"
+        android:layout_below="@+id/txt_plugg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_plugg"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_center"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:fontFamily="@font/robotoregular"
+        android:id="@+id/txt_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activate_alarm"
+        android:layout_marginBottom="12dp"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:gravity="center"
+        android:text="@string/txt_message"
+        android:textSize="@dimen/_13sdp" />
+
+    <Button
+        android:fontFamily="@font/robotomedium"
+        android:layout_above="@+id/rel_live_ad"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ic_button_bg"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/activate_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/activate_alarm" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rel_live_ad"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

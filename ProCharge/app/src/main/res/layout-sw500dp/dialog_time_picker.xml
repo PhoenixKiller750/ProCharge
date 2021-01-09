@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/dialog_bg"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp">
+
+        <RelativeLayout
+            android:padding="@dimen/_5sdp"
+            android:background="@color/dialog_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="italic"
+                android:id="@+id/msg_txt"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:text="Select Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TimePicker
+                android:timePickerMode="spinner"
+                android:layout_below="@+id/msg_txt"
+                android:theme="@style/NumberPickerStyle"
+                android:id="@+id/timePicker"
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_110sdp"/>
+
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                android:id="@+id/ok_btn"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:text="@string/ok"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                android:layout_toStartOf="@+id/ok_btn"
+                android:id="@+id/cancle_btn"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:text="@string/cancle"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

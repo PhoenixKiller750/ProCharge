@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_alarm"
+        android:icon="@drawable/ic_alarm_icon"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_theft"
+        android:icon="@drawable/ic_theft_icon"
+        android:title="@string/title_dashboard" />
+</menu>

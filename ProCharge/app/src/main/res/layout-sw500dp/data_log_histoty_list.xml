@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/rel_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_alignParentStart="true"
+            android:id="@+id/total_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:background="@drawable/circular_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="80" />
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/txt_per"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:text="70%"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:fontFamily="@font/robotoregular"
+            android:layout_toEndOf="@+id/total_progress"
+            android:id="@+id/txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="April 30, 2020"
+            android:textColor="#FFC800"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp" />
+        <LinearLayout
+            android:layout_below="@+id/txt_date"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/total_progress"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:includeFontPadding="false"
+                android:fontFamily="@font/robotoregular"
+                android:id="@+id/setcharging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_charging"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:includeFontPadding="false"
+                android:fontFamily="@font/robotoregular"
+                android:textSize="@dimen/_12sdp"
+                android:id="@+id/txt_set_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_below="@+id/txt_date"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:includeFontPadding="false"
+                android:fontFamily="@font/robotoregular"
+                android:id="@+id/discharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/discharge"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:includeFontPadding="false"
+                android:fontFamily="@font/robotoregular"
+                android:id="@+id/txt_discharge_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/rel_password"
+        android:background="@color/clr_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+
+</RelativeLayout>
